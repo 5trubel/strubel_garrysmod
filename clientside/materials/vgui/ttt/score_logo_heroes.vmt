@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-	"$basetexture"	"vgui/logos/spray"
+	"$basetexture"	"vgui/ttt/score_logo_heroes"
 	"$translucent" "1"
 	"$ignorez" "1"
 	"$vertexcolor" "1"
