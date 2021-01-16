@@ -1,0 +1,11 @@
+{
+	"title"		:	"GamerParty - TTT Heroes - Server Content",
+	"type"		:	"ServerContent",
+	"tags"		:	[ "fun" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
