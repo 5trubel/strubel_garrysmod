@@ -5,8 +5,8 @@ ENT.Type = "anim"
 ENT.Base = "base_anim"
 ENT.Spawnable = false
 
-local marcel_davis = Material( "marcel/davis.png" )
-local marcel_davis_rev = Material( "marcel/davis_reversed.png" )
+local marcel_davis = Material( "eban/eban.png" )
+local marcel_davis_rev = Material( "eban/eban_reversed.png" )
 
 function ENT:Draw()
 	local vel = self:GetVelocity()
@@ -29,7 +29,7 @@ function ENT:Draw()
 
 end
 
-if ( CLIENT ) then killicon.Add( "ent_marcel_bomb", marcel/killicon_bomb", color_white ) return end
+if ( CLIENT ) then killicon.Add( "ent_eban_bomb", "eba/eban_icon.png", color_white ) return end
 
 function ENT:Initialize()
 	self:SetModel( "models/props_c17/SuitCase001a.mdl" )
@@ -40,7 +40,7 @@ function ENT:Initialize()
 	local sw = 16
 	local ew = 0
 	
-	self.Trail = util.SpriteTrail( self, 0, color_white, false, sw, ew, 1, 1 / ( sw + ew ) * 0.5, "marcel/rainbow.vmt" )
+	self.Trail = util.SpriteTrail( self, 0, color_white, false, sw, ew, 1, 1 / ( sw + ew ) * 0.5, "eban/rainbow.vmt" )
 end
 
 function ENT:PhysicsCollide( data, physobj )
