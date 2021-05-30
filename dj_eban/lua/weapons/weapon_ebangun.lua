@@ -3,7 +3,6 @@ AddCSLuaFile()
 AddCSLuaFile( "effects/eban_tracer.lua" )
 AddCSLuaFile( "effects/eban_bounce.lua" )
 
-
 SWEP.Slot = 6
 SWEP.DrawWeaponInfoBox = false
 
@@ -34,7 +33,7 @@ if ( CLIENT ) then language.Add( "eban_ammo", "Funny Ammo" ) end
 
 SWEP.EquipMenuData = {
 	type = "item_weapon",
-	desc = "Description..."
+	desc = "Диджей Ебан"
 }
 
 SWEP.Icon = "eban/eban_icon.png"
@@ -54,11 +53,7 @@ end
 
 function SWEP:IsEquipment() return false end
 
-/* ------------------------------ END OF TTT ------------------------------ */
 
-function SWEP:SetupDataTables()
-	self:NetworkVar( "Float", 1, "NextIdle" )
-end
 
 function SWEP:Initialize()
 	self:SetHoldType( self.HoldType )
@@ -107,7 +102,7 @@ function SWEP:PrimaryAttack()
 end
 
 function SWEP:SecondaryAttack()
-	
+	self:EmitSound( "weapons/djeban/eban" .. math.random( 1, 2 ) .. ".wav", 100, math.random( 60, 80 ) )
 end
 
 function SWEP:GetHeadshotMultiplier()

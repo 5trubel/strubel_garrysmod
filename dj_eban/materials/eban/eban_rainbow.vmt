@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-	"$basetexture" "marcel/johnny_1und1_rainbow"
+	"$basetexture" "eban/eban_rainbow"
 	"$additive" 1
 	"$translucent" 1
 	"$alpha" 1

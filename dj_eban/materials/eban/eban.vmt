@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-	"$basetexture" "marcel/davis"
+	"$basetexture" "eban/eban"
 	"$translucent" 1
 	"$additive" 0
 	"$alpha" 1
