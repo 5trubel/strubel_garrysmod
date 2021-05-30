@@ -1,0 +1,11 @@
+{
+	"title"		:	"[TTT] DJ Eban Gun",
+	"type"		:	"ServerContent",
+	"tags"		:	[ "fun" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
