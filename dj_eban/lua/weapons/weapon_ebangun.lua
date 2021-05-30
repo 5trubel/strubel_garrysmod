@@ -29,8 +29,6 @@ SWEP.Primary.Ammo = "eban"
 game.AddAmmoType( { name = "eban" } )
 if ( CLIENT ) then language.Add( "eban_ammo", "Funny Ammo" ) end
 
-/* --------------------------------- TTT ---------------------------------- */
-
 SWEP.EquipMenuData = {
 	type = "item_weapon",
 	desc = "Диджей Ебан"
@@ -53,7 +51,10 @@ end
 
 function SWEP:IsEquipment() return false end
 
-
+function SWEP:SetupDataTables()
+	self:NetworkVar( "Float", 1, "NextIdle" )
+   end
+   
 
 function SWEP:Initialize()
 	self:SetHoldType( self.HoldType )
