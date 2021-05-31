@@ -41,7 +41,7 @@ SWEP.CanBuy = { ROLE_TRAITOR }
 SWEP.LimitedStock = true
 
 if ( GAMEMODE.Name == "Trouble in Terrorist Town" ) then
-	SWEP.Primary.Damage = 5
+	SWEP.Primary.Damage = 8
 	SWEP.Primary.ClipSize = 1
 	SWEP.Primary.DefaultClip = 1
 	SWEP.Primary.ClipMax = 1
@@ -72,7 +72,7 @@ function SWEP:PrimaryAttack()
 			self.LoopSound = CreateSound( self.Owner, Sound( "weapons/djeban/eban_loop.wav" ) )
 			if ( self.LoopSound ) then self.LoopSound:Play() end
 		end
-		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.1 ) end
+		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.5 ) end
 	end
 
 	if ( IsFirstTimePredicted() ) then
@@ -169,7 +169,7 @@ function SWEP:Think()
 
 	if ( self.Owner:IsPlayer() && ( self.Owner:KeyReleased( IN_ATTACK ) || !self.Owner:KeyDown( IN_ATTACK ) ) ) then
 		if ( self.LoopSound ) then self.LoopSound:ChangeVolume( 0, 0.1 ) end
-		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 1, 0.1 ) end
+		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 1, 0.5 ) end
 	end
 end
 
