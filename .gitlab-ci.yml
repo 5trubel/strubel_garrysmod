@@ -1,0 +1,14 @@
+variables:
+  PROJECT_NAME: "GARRYS MOD NIGHTLY"
+stages:
+  - build
+
+build:
+  tags:
+    - windows
+  stage: build
+  script:
+  - 
+  artifacts:
+    expire_in: 10min
+    untracked: true
