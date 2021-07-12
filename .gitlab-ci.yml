@@ -8,7 +8,7 @@ build:
     - windows
   stage: build
   script:
-  - 
+  - echo "TBA"
   artifacts:
     expire_in: 10min
     untracked: true
