@@ -1,5 +1,5 @@
 variables:
-  PROJECT_NAME: "GARRYS MOD NIGHTLY"
+  PROJECT_NAME: "GARRYS MOD UPDATE"
 stages:
   - build
   - deploy
