@@ -2,6 +2,7 @@ variables:
   PROJECT_NAME: "GARRYS MOD NIGHTLY"
 stages:
   - build
+  - deploy
 
 build:
   tags:
@@ -14,3 +15,12 @@ build:
   artifacts:
     expire_in: 10min
     untracked: true
+
+deploy:
+  tags:
+    - windows
+  stage: deploy
+  script:
+    - bin\gmpublish.exe update -id 2501954788 -addon djeban.gma -icon djeban.jpg -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
+    - bin\gmpublish.exe update -id 2187239728 -addon clientside.gma -icon clientside.jpg -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
+    - bin\gmpublish.exe update -id 1962795988 -addon billjihad.gma -icon billjihad.jpg -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
