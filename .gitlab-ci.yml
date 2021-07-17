@@ -8,9 +8,9 @@ build:
     - windows
   stage: build
   script:
-    - "bin/gmad.exe" create -folder dj_eban -out djeban.gma 
-    - "bin/gmad.exe" create -folder clientside -out clientside.gma
-    - "bin/gmad.exe" create -folder billjihad -out billjihad.gma
+    - bin\gmad.exe create -folder dj_eban -out djeban.gma 
+    - bin\gmad.exe create -folder clientside -out clientside.gma
+    - bin\gmad.exe create -folder billjihad -out billjihad.gma
   artifacts:
     expire_in: 10min
     untracked: true
