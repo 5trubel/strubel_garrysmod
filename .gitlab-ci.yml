@@ -1,5 +1,5 @@
 variables:
-  PROJECT_NAME: "GARRYS MOD UPDATE"
+  PROJECT_NAME: "GARRYS MOD UPDATE+"
 stages:
   - build
   - deploy
@@ -9,9 +9,9 @@ build:
     - windows
   stage: build
   script:
-    - bin\gmad.exe create -folder dj_eban -out djeban.gma 
-    - bin\gmad.exe create -folder clientside -out clientside.gma
-    - bin\gmad.exe create -folder billjihad -out billjihad.gma
+    - gmad create -folder dj_eban -out djeban.gma 
+    - gmad create -folder clientside -out clientside.gma
+    - gmad create -folder billjihad -out billjihad.gma
   artifacts:
     expire_in: 10min
     untracked: true
@@ -21,6 +21,6 @@ deploy:
     - windows
   stage: deploy
   script:
-    - bin\gmpublish.exe update -id 2501954788 -addon djeban.gma -icon djeban.jpg -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
-    - bin\gmpublish.exe update -id 2187239728 -addon clientside.gma -icon clientside.jpg -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
-    - bin\gmpublish.exe update -id 1962795988 -addon billjihad.gma -icon billjihad.jpg -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
+    - gmpublish update -id 2501954788 -addon djeban.gma -icon djeban.jpg -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
+    - gmpublish update -id 2187239728 -addon clientside.gma -icon clientside.jpg -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
+    - gmpublish update -id 1962795988 -addon billjihad.gma -icon billjihad.jpg -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
