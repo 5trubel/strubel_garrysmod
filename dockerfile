@@ -1,5 +1,5 @@
 #Prepare Image
-FROM ubuntu:groovy
+FROM ubuntu:focal
 COPY ./ /root/
 RUN ls /root/ && \
     chmod 777 -R /root/
