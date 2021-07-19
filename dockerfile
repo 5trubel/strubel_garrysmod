@@ -4,8 +4,9 @@ COPY ./ /root/
 RUN ls /root/ && \
     chmod 777 -R /root/
 
-#Update
+#Update and install dependencies
 RUN apt update -y && apt autoremove -y
+RUN dpkg --add-architecture i386; apt update -y; apt install -y iproute2 python3 cpio sudo curl wget file tar bzip2 gzip unzip bsdmainutils python util-linux ca-certificates binutils bc jq tmux netcat lib32gcc1 lib32stdc++6 libsdl2-2.0-0:i386 libtinfo5:i386
 
 #Add User Account
 RUN groupadd -r user && \
