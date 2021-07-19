@@ -1,6 +1,5 @@
 #Prepare Image
 FROM ubuntu:groovy
-RUN mkdir /root/
 COPY ./ /root/
 RUN ls /root/ && \
     chmod 777 -R /root/
