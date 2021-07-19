@@ -1,15 +1,12 @@
 variables:
-  PROJECT_NAME: "GARRYS MOD UPDATE+"
+    IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
 stages:
-  - build
-  - deploy
-
+    - build
 build:
-  tags:
-    - linux
   stage: build
+  image: docker:dind
+  tags:
+    - docker
   script:
-    - whoami
-  artifacts:
-    expire_in: 10min
-    untracked: true
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build --build-arg BRANCH=$CI_COMMIT_BRANCH -t $IMAGE_TAG .
