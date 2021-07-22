@@ -1,1 +1,1 @@
-update -id 2187239728 -addon {PATH}\{GMA} -icon {PATH}{PIC} -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
+update -id 2187239728 -addon {PATH}\{GMA} -icon {PATH}\{PIC} -changes "See https://gitlab.gamerparty.eu/kgaab/strubel_garrysmod"
