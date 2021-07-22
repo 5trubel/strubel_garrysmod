@@ -1,12 +1,27 @@
 variables:
-    IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+  PROJECT_NAME: "GARRYS MOD UPDATE+"
 stages:
-    - build
+  - build
+  - deploy
+
 build:
-  stage: build
-  image: docker:dind
   tags:
-    - docker
+    - windows
+  stage: build
   script:
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build .
+    - gmad create -folder dj_eban -out djeban.gma 
+    - gmad create -folder clientside -out clientside.gma
+    - gmad create -folder billjihad -out billjihad.gma
+  artifacts:
+    expire_in: 10min
+    untracked: true
+
+deploy:
+  tags:
+    - windows
+  stage: deploy
+  script:
+    - whoami
+    - bin/gitlab.exe djeban.gma 
+    - bin/gitlab.exe clientside.gma
+    - bin/gitlab.exe billjihad.gma

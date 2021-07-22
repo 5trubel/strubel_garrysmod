@@ -21,4 +21,11 @@ RUN mkdir /home/user/.steam/ && \
 	wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz; tar -xvzf steamcmd_linux.tar.gz && \
 	/home/user/.steam/steamcmd/steamcmd.sh +exit
 
+#Install gmodWS
+RUN GMODWS_LATEST=$(curl --silent "https://api.github.com/repos/Meachamp/gmodws/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")') && \
+    GMODWS_ZIP=$(echo "https://github.com/Meachamp/gmodws/releases/download/$GMODWS_LATEST/gmodws.zip") && \
+    curl -sqL $GMODWS_ZIP -o $1
+
 USER user
+
+RUN ~/.steam/steamcmd.sh +login strubellpkevin +quit
