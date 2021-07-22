@@ -5,8 +5,8 @@ ENT.Type = "anim"
 ENT.Base = "base_anim"
 ENT.Spawnable = false
 
-local marcel_davis = Material( "eban/eban.png" )
-local marcel_davis_rev = Material( "eban/eban_reversed.png" )
+local eban = Material( "eban/eban.png" )
+local eban_rev = Material( "eban/eban_reversed.png" )
 
 function ENT:Draw()
 	local vel = self:GetVelocity()
@@ -21,10 +21,10 @@ function ENT:Draw()
 
 	surface.SetDrawColor( color_white )
 	
-	render.SetMaterial( marcel_davis )
+	render.SetMaterial( eban )
 	render.DrawQuadEasy( self:GetPos(), vel , 64, 64, color_white, -90 + vz )
 
-	render.SetMaterial( marcel_davis_rev )
+	render.SetMaterial( eban_rev )
 	render.DrawQuadEasy( self:GetPos(), -vel, 64, 64, color_white, -90 - vz )
 
 end

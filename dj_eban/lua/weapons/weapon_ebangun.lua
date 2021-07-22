@@ -41,7 +41,7 @@ SWEP.CanBuy = { ROLE_TRAITOR }
 SWEP.LimitedStock = true
 
 if ( GAMEMODE.Name == "Trouble in Terrorist Town" ) then
-	SWEP.Primary.Damage = 8
+	SWEP.Primary.Damage = 10
 	SWEP.Primary.ClipSize = 1
 	SWEP.Primary.DefaultClip = 1
 	SWEP.Primary.ClipMax = 1
