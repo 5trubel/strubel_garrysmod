@@ -1,5 +1,5 @@
 
-AddCSLuaFile()
+AddCSLuaFile("entities/ent_eban_bomb.lua")
 AddCSLuaFile( "effects/eban_tracer.lua" )
 AddCSLuaFile( "effects/eban_bounce.lua" )
 
@@ -21,7 +21,7 @@ SWEP.HoldType = "smg"
 
 SWEP.Primary.ClipSize = 1
 SWEP.Primary.Delay = 0.1
-SWEP.Primary.Damage = 5
+SWEP.Primary.Damage = 10
 SWEP.Primary.DefaultClip = 1
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "eban"
