@@ -1,27 +1,14 @@
-variables:
-  PROJECT_NAME: "GARRYS MOD UPDATE+"
 stages:
   - build
-  - deploy
 
 build:
   tags:
     - windows
   stage: build
   script:
-    - gmad create -folder dj_eban -out djeban.gma 
-    - gmad create -folder clientside -out clientside.gma
-    - gmad create -folder billjihad -out billjihad.gma
+    - bin/gmad create -folder dj_eban -out djeban.gma 
+    - bin/gmad create -folder clientside -out clientside.gma
+    - bin/gmad create -folder billjihad -out billjihad.gma
   artifacts:
     expire_in: 10min
     untracked: true
-
-deploy:
-  tags:
-    - windows
-  stage: deploy
-  script:
-    - whoami
-    - bin/gitlab.exe djeban.gma 
-    - bin/gitlab.exe clientside.gma
-    - bin/gitlab.exe billjihad.gma
