@@ -74,31 +74,30 @@ function SWEP:PrimaryAttack()
 		end
 		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.5 ) end
 	end
-	
-	timer.Simple(2, function() print("Spinning up weapon..."))
-	if ( IsFirstTimePredicted() ) then
-	
-		local bullet = {}
-		bullet.Num = 1
-		bullet.Src = self.Owner:GetShootPos()
-		bullet.Dir = self.Owner:GetAimVector()
-		bullet.Spread = Vector( 0.01, 0.01, 0 )
-		bullet.Tracer = 1
-		bullet.Force = 5
-		bullet.Damage = self.Primary.Damage
-		bullet.TracerName = "eban_tracer"
-		self.Owner:FireBullets( bullet )
 
-		self:SendWeaponAnim( ACT_VM_PRIMARYATTACK )
-		self.Owner:SetAnimation( PLAYER_ATTACK1 )
+		if ( IsFirstTimePredicted() ) then
 		
-		if ( GAMEMODE.Name == "Trouble in Terrorist Town" ) then
-			self:TakePrimaryAmmo( 0 )
+			local bullet = {}
+			bullet.Num = 1
+			bullet.Src = self.Owner:GetShootPos()
+			bullet.Dir = self.Owner:GetAimVector()
+			bullet.Spread = Vector( 0.01, 0.01, 0 )
+			bullet.Tracer = 1
+			bullet.Force = 5
+			bullet.Damage = self.Primary.Damage
+			bullet.TracerName = "eban_tracer"
+			self.Owner:FireBullets( bullet )
+
+			self:SendWeaponAnim( ACT_VM_PRIMARYATTACK )
+			self.Owner:SetAnimation( PLAYER_ATTACK1 )
+			
+			if ( GAMEMODE.Name == "Trouble in Terrorist Town" ) then
+				self:TakePrimaryAmmo( 0 )
+			end
+		
 		end
 	
-	end
-
-	self:SetNextPrimaryFire( CurTime() + self.Primary.Delay )
+		self:SetNextPrimaryFire( CurTime() + self.Primary.Delay )
 
 	self:Idle()
 end
