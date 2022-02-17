@@ -41,7 +41,7 @@ SWEP.CanBuy = { ROLE_TRAITOR }
 SWEP.LimitedStock = true
 
 if ( GAMEMODE.Name == "Trouble in Terrorist Town" ) then
-	SWEP.Primary.Damage = 10
+	SWEP.Primary.Damage = 15
 	SWEP.Primary.ClipSize = 1
 	SWEP.Primary.DefaultClip = 1
 	SWEP.Primary.ClipMax = 1
@@ -74,7 +74,8 @@ function SWEP:PrimaryAttack()
 		end
 		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.5 ) end
 	end
-
+	
+	timer.Simple(2, function() print("Spinning up weapon..."))
 	if ( IsFirstTimePredicted() ) then
 	
 		local bullet = {}
