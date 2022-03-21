@@ -1,5 +1,6 @@
 stages:
   - build
+  - publish
 
 build:
   tags:
@@ -12,6 +13,7 @@ build:
   artifacts:
     expire_in: 10min
     untracked: true
+
 sync-with-github:
   tags: 
     - linux
