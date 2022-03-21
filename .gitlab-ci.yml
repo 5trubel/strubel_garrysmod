@@ -12,3 +12,24 @@ build:
   artifacts:
     expire_in: 10min
     untracked: true
+sync-with-github:
+  tags: 
+    - linux
+  stage: publish
+  before_script:
+    - git config --global user.name "${GITLAB_USER_NAME}"
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - COMMIT=$(git log -1 --pretty=%B)
+  script:
+    - rm -rf .git
+    - mkdir old/ && cd old && mv ../* ./ && exit 0
+    - cd ../
+    - mkdir new && cd new
+    - pwd 
+    - git init
+    - git pull https://$UNAME:$PASSWD@github.com/5trubel/strubel-lgsm.git
+    - rsync -avP ../old/ ./
+    - git add *
+    - git commit -m "$COMMIT"
+    - git push --quiet --set-upstream https://$UNAME:$PASSWD@github.com/5trubel/strubel-lgsm.git master
+
