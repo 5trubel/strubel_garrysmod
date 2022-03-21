@@ -29,9 +29,9 @@ sync-with-github:
     - mkdir new && cd new
     - pwd 
     - git init
-    - git pull https://$UNAME:$PASSWD@github.com/5trubel/strubel-lgsm.git
+    - git pull https://$UNAME:$PASSWD@github.com/5trubel/strubel_garrysmod.git
     - rsync -avP ../old/ ./
     - git add *
     - git commit -m "$COMMIT"
-    - git push --quiet --set-upstream https://$UNAME:$PASSWD@github.com/5trubel/strubel-lgsm.git master
+    - git push --quiet --set-upstream https://$UNAME:$PASSWD@github.com/5trubel/strubel_garrysmod.git master
 
