@@ -1,10 +1,8 @@
-hook.Add( "OnPlayerChat", "HelloCommand", function( ply, strText, bTeam, bDead ) 
-    if ( ply != LocalPlayer() ) then return end
-
-	strText = string.lower( strText ) -- make the string lower case
-
-	if ( strText == "/hello" ) then -- if the player typed /hello then
-		print( "Hello world!" ) -- print Hello world to the console
-		return true -- this suppresses the message from being shown
+-- If a Player types something in the Chat Log play a Sound to everyone
+hook.Add("OnPlayerChat", "PlaySound", function(ply,txt)
+	if string.find(txt, "dumm") then
+		ply:EmitSound("sound/tafelsounds/dumm.wav")
+		-- Write to Console
+		print(ply:Nick() .. " played the sound 'dumm'.")
 	end
-end )
+end)
