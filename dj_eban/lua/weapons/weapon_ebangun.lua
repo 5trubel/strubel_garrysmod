@@ -21,7 +21,7 @@ SWEP.HoldType = "smg"
 
 SWEP.Primary.ClipSize = 1
 SWEP.Primary.Delay = 0.1
-SWEP.Primary.Damage = 10
+SWEP.Primary.Damage = 20
 SWEP.Primary.DefaultClip = 1
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "eban"
