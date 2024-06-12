@@ -1,22 +1,23 @@
 local soundFolder = "sound/endroundmusic/"
 local winningClasses = { "innocent", "traitor", "draw" }
 
-local function PlayRandomSound()
-    -- Get the winning class
-    local winningClass = winningClasses[GetRoundWinner()]
-    
-    local soundFiles = file.Find(soundFolder .. winningClass .. "/*.wav", "GAME")
 
-    if #soundFiles > 0 then
-        local soundFile = soundFolder .. winningClass .. "/" .. soundFiles[math.random(1, #soundFiles)]
-        surface.PlaySound(soundFile)
+if ( SERVER ) then
+    local queue = {}
+
+    -- Create table for each sound for each class
+    for _, class in pairs(winningClasses) do
+        util.PrecacheSound(soundFolder .. class .. ".mp3")
+    end
+    
+    -- Check if Gamemode is TTT
+    if engine.ActiveGamemode() == "terrortown" then
+        hook.Add ("TTTEndRound", "EndRoundMusic", function (result)
+            if table.HasValue(winningClasses, result) then
+                -- Add random sound to queue based on result
+                table.insert(queue, soundFolder .. result .. ".mp3")
+                
+            end
+        end)
     end
 end
-
-hook.Add("TTTEndRound", "PlayEndRoundSound", PlayRandomSound)
-
--- Log to console
-hook.Add("TTTEndRound", "LogEndRound", function()
-    print("End of round.")
-end)
-
