@@ -1,4 +1,3 @@
-
 AddCSLuaFile("entities/ent_eban_bomb.lua")
 AddCSLuaFile( "effects/eban_tracer.lua" )
 AddCSLuaFile( "effects/eban_bounce.lua" )
