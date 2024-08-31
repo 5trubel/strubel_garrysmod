@@ -100,7 +100,6 @@ function SWEP:PrimaryAttack()
 
 	self:Idle()
 end
-
 function SWEP:SecondaryAttack()
 	self:EmitSound( "weapons/djeban/eban" .. math.random( 1, 2 ) .. ".wav", 100, math.random( 60, 80 ) )
 end

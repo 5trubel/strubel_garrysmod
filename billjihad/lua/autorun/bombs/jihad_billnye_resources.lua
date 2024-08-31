@@ -1,5 +1,6 @@
 --icon
 resource.AddFile( "materials/vgui/ttt/billnye/billnye.vmt" );
+resource.AddFile( "materials/vgui/ttt/billnye/billnye.vtf" );
 
 --sounds
 resource.AddFile( "sound/jihad/billnye.wav" );
