@@ -11,6 +11,7 @@ resource.AddFile("materials/vgui/ttt/vskin/helpscreen/tttc.vtf")
 
 -- Brain Parasite
 resource.AddFile("materials/vgui/ttt/icon_brain_parasite.png")
+resource.AddFile("materials/vgui/ttt/icon_brain_parasite.vtf")
 
 -- Amaterasu
 resource.AddFile("sound/weapons/msharingan.wav")
