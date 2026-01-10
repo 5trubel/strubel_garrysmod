@@ -1,0 +1,12 @@
+{
+	"title"		:	"[TTT] Bouncing Toyota Yaris Gun",
+	"type"		:	"ServerContent",
+	"tags"		:	[ "fun" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*",
+		"LICENSE*"
+	]
+}
