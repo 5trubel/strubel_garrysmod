@@ -67,6 +67,7 @@ function SWEP:PrimaryAttack()
 		if (math.random(1,10) == 1) then
 			song = "ttt_bouncingyaris_song_02"
 		end
+		print("Playing song: " .. song)
 		ent.Sound = song
 		ent:Spawn()
 		self:Remove()
