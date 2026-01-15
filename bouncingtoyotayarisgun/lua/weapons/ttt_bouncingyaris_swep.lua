@@ -66,6 +66,8 @@ function SWEP:PrimaryAttack()
 		local song = "ttt_bouncingyaris_song_01"
 		if (math.random(1,10) == 1) then
 			song = "ttt_bouncingyaris_song_02"
+		else
+			song = "ttt_bouncingyaris_song_03"
 		end
 		print("Playing song: " .. song)
 		ent.Sound = song

@@ -16,7 +16,7 @@ sound.Add({
 
 sound.Add({
 		name = "ttt_bouncingyaris_song_01",
-		channel = CHAN_AUTO,
+		channel = CHAN_STATIC,
 		volume = 1.5,
 		level = 150,
 		sound = "ttt_bouncingyaris/ttt_bouncingyaris_01.wav"
@@ -24,8 +24,16 @@ sound.Add({
 
 sound.Add({
 		name = "ttt_bouncingyaris_song_02",
-		channel = CHAN_AUTO,
+		channel = CHAN_STATIC,
 		volume = 1.5,
 		level = 150,
 		sound = "ttt_bouncingyaris/ttt_bouncingyaris_02.wav"
+})
+
+sound.Add({
+		name = "ttt_bouncingyaris_song_03",
+		channel = CHAN_STATIC,
+		volume = 1.5,
+		level = 150,
+		sound = "ttt_bouncingyaris/ttt_bouncingyaris_03.wav"
 })
