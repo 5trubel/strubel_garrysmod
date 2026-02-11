@@ -15,6 +15,7 @@ resource.AddFile( "vgui/eban/weapon_ebangun.png" );
 
 --sounds
 resource.AddFile( "sound/weapons/djeban/eban_beat.wav" );
+resource.AddFile( "sound/weapons/djeban/eban_beat_pap.wav" );
 resource.AddFile( "sound/weapons/djeban/eban_loop.wav" );
 resource.AddFile( "sound/weapons/djeban/eban1.wav" );
 resource.AddFile( "sound/weapons/djeban/eban2.wav" );
