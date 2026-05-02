@@ -15,11 +15,9 @@ end
 
 SWEP.ViewModelFOV = 65
  
-SWEP.Category = "Hunt Down The Freeman"
-
 SWEP.Primary.ClipSize      = 150
 SWEP.Primary.DefaultClip   = 150
-SWEP.Primary.Ammo          = "smg1"
+SWEP.Primary.Ammo          = ""
 SWEP.Primary.Damage        = 6
 
 SWEP.Kind = WEAPON_HEAVY
@@ -32,4 +30,8 @@ SWEP.NoSights = false
 
 function SWEP:Reload()
     return false
+end
+
+function SWEP:Equip( newOwner )
+	BaseClass.Equip(self, newOwner)
 end
