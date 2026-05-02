@@ -28,7 +28,7 @@ SWEP.Primary.Ammo = "Pistol"
 hook.Add("ScalePlayerDamage", "HDTF_ScalePlayerDamage", function(ply, hitgroup, dmginfo)
 	if ply:GetActiveWeapon() == SWEP then
 		local wep = ply:GetActiveWeapon()
-		if wep:GetClass() == "weapon_hdtf_spas" then
+		if wep:GetClass() == "weapon_hdtf_m4a1" then
 			print("Hitgroup: " .. hitgroup)
 			if hitgroup == HITGROUP_HEAD then
 				dmginfo:SetDamage(dmginfo:GetDamage() * 20)
