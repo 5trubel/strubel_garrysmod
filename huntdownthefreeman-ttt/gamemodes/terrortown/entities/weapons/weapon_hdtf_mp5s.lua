@@ -8,7 +8,7 @@ end
 if CLIENT then
     SWEP.PrintName = "MP5SD"
     SWEP.Slot = 2
-    SWEP.Icon = surface.GetTextureID("sprites/hdtf/mp5_s")
+    SWEP.Icon = "sprites/hdtf/mp5_s"
     SWEP.IconLetter = "a"
 end
 

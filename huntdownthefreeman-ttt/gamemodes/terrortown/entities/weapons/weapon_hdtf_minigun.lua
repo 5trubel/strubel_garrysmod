@@ -13,26 +13,14 @@ if CLIENT then
     SWEP.IconLetter = "v"
 end
 
-SWEP.Base = "hdtf_weapon_base"
-DEFINE_BASECLASS( SWEP.Base )
-
-
 SWEP.ViewModelFOV = 65
  
 SWEP.Category = "Hunt Down The Freeman"
- 
-SWEP.Spawnable = true
- 
-SWEP.ViewModel  = "models/hdtf/weapons/c_minigun.mdl"
-SWEP.WorldModel = "models/hdtf/weapons/w_minigun.mdl"
 
-SWEP.HoldType = "shotgun"
- 
 SWEP.Primary.ClipSize      = 150
 SWEP.Primary.DefaultClip   = 150
-SWEP.Primary.Ammo          = "none"
+SWEP.Primary.Ammo          = "smg1"
 SWEP.Primary.Damage        = 6
-
 
 SWEP.Kind = WEAPON_HEAVY
 SWEP.AutoSpawnable = true
@@ -41,3 +29,7 @@ SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false
+
+function SWEP:Reload()
+    return false
+end

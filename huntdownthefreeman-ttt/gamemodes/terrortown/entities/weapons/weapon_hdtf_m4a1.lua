@@ -8,11 +8,11 @@ end
 if CLIENT then
 	SWEP.PrintName = "M4A1"
 	SWEP.Slot = 2
-	SWEP.Icon = "sprites/hdtf/m4a1"
+	SWEP.Icon = "sprites/hdtf/m4"
 	SWEP.IconLetter = "a"
 end
 
-SWEP.Primary.Damage        = 13
+SWEP.Primary.Damage        = 15
 
 
 SWEP.Kind = WEAPON_HEAVY

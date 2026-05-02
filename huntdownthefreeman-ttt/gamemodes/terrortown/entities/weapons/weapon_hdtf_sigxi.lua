@@ -8,7 +8,7 @@ end
 if CLIENT then
     SWEP.PrintName = "Sig 556"
     SWEP.Slot = 2
-    SWEP.Icon = surface.GetTextureID("sprites/hdtf/sig556")
+    SWEP.Icon = "sprites/hdtf/sig556"
     SWEP.IconLetter = "a"
 end
 

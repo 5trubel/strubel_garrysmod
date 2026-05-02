@@ -10,7 +10,7 @@ if CLIENT then
 
     SWEP.PrintName = "Kar98 (Scoped)"
     SWEP.Slot = 3
-    SWEP.Icon = "sprites/hdtf_ttt/hdtf_ttt_kar98scope"
+    SWEP.Icon = "sprites/hdtf/k98"
     SWEP.IconLetter = "a"
 end
 

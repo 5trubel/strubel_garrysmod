@@ -12,7 +12,7 @@ if CLIENT then
 	SWEP.IconLetter = "a"
 end
 
-SWEP.Primary.Damage        = 15
+SWEP.Primary.Damage        = 20
 
 
 SWEP.Kind = WEAPON_HEAVY
@@ -22,7 +22,7 @@ SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false
-SWEP.Primary.Ammo = "AR2"
+SWEP.Primary.Ammo = "AlyxGun"
 
 
 hook.Add("ScalePlayerDamage", "HDTF_ScalePlayerDamage", function(ply, hitgroup, dmginfo)

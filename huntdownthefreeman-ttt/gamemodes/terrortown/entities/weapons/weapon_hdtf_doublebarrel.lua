@@ -8,7 +8,7 @@ end
 if CLIENT then
     SWEP.PrintName = "Double Barrel Shotgun"
     SWEP.Slot = 3
-    SWEP.Icon = surface.GetTextureID("sprites/hdtf/hdtf_doublebarrel")
+    SWEP.Icon = "sprites/hdtf/doublebarrel"
     SWEP.IconLetter = "a"
 end
 
