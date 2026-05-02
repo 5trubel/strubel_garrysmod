@@ -17,12 +17,12 @@ SWEP.ViewModelFOV = 65
  
 SWEP.Primary.ClipSize      = 150
 SWEP.Primary.DefaultClip   = 150
-SWEP.Primary.Ammo          = ""
+SWEP.Primary.Ammo          = "smg1"
 SWEP.Primary.Damage        = 6
 
 SWEP.Kind = WEAPON_HEAVY
 SWEP.AutoSpawnable = true
-SWEP.AmmoEnt = "item_ammo_smg1_ttt"
+SWEP.AmmoEnt = ""
 SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
@@ -33,5 +33,6 @@ function SWEP:Reload()
 end
 
 function SWEP:Equip( newOwner )
+    newOwner:GiveAmmo(150, self:GetPrimaryAmmoType() or "smg1", true)
 	BaseClass.Equip(self, newOwner)
 end
