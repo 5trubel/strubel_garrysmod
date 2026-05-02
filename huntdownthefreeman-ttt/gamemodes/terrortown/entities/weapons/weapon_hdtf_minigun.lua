@@ -16,7 +16,7 @@ end
 SWEP.ViewModelFOV = 65
  
 SWEP.Primary.ClipSize      = 150
-SWEP.Primary.DefaultClip   = 150
+SWEP.Primary.DefaultClip   = 0
 SWEP.Primary.Ammo          = "smg1"
 SWEP.Primary.Damage        = 6
 
