@@ -1,0 +1,13 @@
+{
+	"title"		:	"Hunt down the Freeman - TTT Weapon Pack",
+	"type"		:	"weapon",
+	"tags"		:	[ "fun" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*",
+		"*txt",
+		"*.url"
+	]
+}

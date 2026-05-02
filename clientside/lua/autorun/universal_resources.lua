@@ -113,3 +113,10 @@ resource.AddFile("materials/vgui/ttt/hud_icon_dancing.png")
 resource.AddFile("materials/vgui/ttt/icon_dancegun.png")
 resource.AddFile("materials/vgui/ttt/icon_dancegun.vmt")
 resource.AddFile("materials/vgui/ttt/icon_dancegun.vtf")
+
+
+-- Map icons
+for _, file in ipairs(file.Find("maps/thumb/*.png", "GAME")) do
+    print(file)
+    resource.AddFile("maps/thumb/" .. file)
+end
