@@ -26,8 +26,8 @@ SWEP.Primary.SpreadADS     = Vector(0.002,0.002)
 
 -- Traitor Stuff
 SWEP.EquipMenuData = {
-	type = "item_weapon",
-	desc = "Kar98 with Scope"
+    type = "item_weapon",
+    desc = "Kar98 with Scope"
 }
 SWEP.CanBuy = { ROLE_TRAITOR }
 SWEP.LimitedStock = true
