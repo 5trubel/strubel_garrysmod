@@ -13,7 +13,7 @@ if CLIENT then
 end
 
 
-SWEP.Kind = WEAPON_EQUIP 
+SWEP.Kind = WEAPON_PISTOL 
 SWEP.AutoSpawnable = true
 SWEP.AmmoEnt = ""
 SWEP.InLoadoutFor = {nil}
