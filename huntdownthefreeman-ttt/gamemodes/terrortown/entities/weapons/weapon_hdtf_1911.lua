@@ -15,6 +15,8 @@ end
 SWEP.Primary.Damage        = 16
 SWEP.Primary.FireRate      = 0.15
 
+
+SWEP.Primary.Ammo   = "Pistol"
 SWEP.Kind = WEAPON_PISTOL
 SWEP.AutoSpawnable = true
 SWEP.AmmoEnt = "item_ammo_pistol_ttt"
