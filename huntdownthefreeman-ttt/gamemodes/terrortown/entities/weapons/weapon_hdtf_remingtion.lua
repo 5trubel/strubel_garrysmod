@@ -12,6 +12,7 @@ if CLIENT then
     SWEP.IconLetter = "a"
 end
 
+SWEP.Primary.Damage        = 13
 SWEP.Primary.Ammo = "Buckshot"
 SWEP.Kind = WEAPON_HEAVY
 SWEP.AutoSpawnable = true
@@ -21,6 +22,19 @@ SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false
 
+
+function SWEP:GetHeadshotMultiplier(victim, dmginfo)
+   local att = dmginfo:GetAttacker()
+   if not IsValid(att) then return 3 end
+
+   local dist = victim:GetPos():Distance(att:GetPos())
+   local d = math.max(0, dist - 140)
+
+   -- Decay from 2 to 1 slowly as distance increases. Note that this used to be
+   -- 3+, but at that time shotgun bullets were treated like in HL2 where half
+   -- of them were hull traces that could not headshot.
+   return 1 + math.max(0, (1.0 - 0.002 * (d ^ 1.25)))
+end
 
 hook.Add("ScalePlayerDamage", "HDTF_ScalePlayerDamage", function(ply, hitgroup, dmginfo)
 	if ply:GetActiveWeapon() == SWEP then
