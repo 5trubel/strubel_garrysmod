@@ -8,7 +8,7 @@ end
 if CLIENT then
     SWEP.PrintName = "MP7"
     SWEP.Slot = 2
-    SWEP.Icon = "sprites/hdtf/mp7"
+    SWEP.Icon = "sprites/hdtf/smg1"
     SWEP.IconLetter = "a"
 end
 
